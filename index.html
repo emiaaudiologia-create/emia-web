@@ -4,33 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EMIA - Empatía e Integración Audiológica</title>
-   
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap" rel="stylesheet">
-   
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <style>
         /* --- VARIABLES Y CONFIGURACIÓN --- */
         :root {
-            --bg-dark: #0A2540; /* Azul marino oscuro */
-            --bg-darker: #001F3F; /* Footer */
+            --bg-dark: #0A2540;       /* Azul marino oscuro */
+            --bg-darker: #001F3F;     /* Footer */
             --text-white: #FFFFFF;
             --accent-yellow: #FBBF24;
             --accent-pink: #EC4899;
             --accent-blue: #3B82F6;
-           
+            
             --font-title: 'Poppins', sans-serif;
             --font-body: 'Inter', sans-serif;
         }
+
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
+
         html {
             scroll-behavior: smooth;
         }
+
         body {
             background-color: var(--bg-dark);
             color: var(--text-white);
@@ -39,22 +43,26 @@
             font-size: 18px; /* Accesibilidad base */
             overflow-x: hidden;
         }
+
         /* --- TIPOGRAFÍA --- */
         h1, h2, h3 {
             font-family: var(--font-title);
             font-weight: 700;
             margin-bottom: 1rem;
         }
+
         h1 { font-size: clamp(40px, 5vw, 60px); line-height: 1.2; }
         h2 { font-size: clamp(32px, 4vw, 48px); color: var(--accent-yellow); margin-bottom: 2rem; }
         h3 { font-size: 24px; color: var(--accent-pink); }
         p { margin-bottom: 1.5rem; font-size: 1.1rem; }
+
         /* --- UTILIDADES --- */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
+
         .btn {
             display: inline-block;
             background-color: var(--accent-yellow);
@@ -69,13 +77,16 @@
             border: none;
             cursor: pointer;
         }
+
         .btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(251, 191, 36, 0.3);
         }
+
         section {
             padding: 80px 0;
         }
+
         /* --- NAVEGACIÓN --- */
         header.nav-header {
             position: sticky;
@@ -86,11 +97,13 @@
             padding: 15px 0;
             border-bottom: 1px solid rgba(255,255,255,0.1);
         }
+
         .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
+
         .logo {
             display: flex;
             align-items: center;
@@ -100,6 +113,7 @@
             color: white;
             text-decoration: none;
         }
+
         .logo-icon {
             background: white;
             width: 45px;
@@ -110,10 +124,12 @@
             justify-content: center;
             position: relative;
         }
+
         .logo-icon i {
             color: black; /* Oreja negra */
             font-size: 24px;
         }
+
         .logo-v {
             position: absolute;
             color: #10B981; /* Verde */
@@ -122,45 +138,53 @@
             bottom: 5px;
             right: 5px;
         }
+
         .nav-links {
             display: flex;
             gap: 25px;
             list-style: none;
         }
+
         .nav-links a {
             color: white;
             text-decoration: none;
             font-weight: 600;
             transition: color 0.3s;
         }
+
         .nav-links a:hover {
             color: var(--accent-yellow);
         }
+
         .menu-toggle {
             display: none;
             font-size: 2rem;
             cursor: pointer;
         }
+
         /* --- HERO --- */
         #hero {
             height: 100vh;
             display: flex;
             align-items: center;
-            background: linear-gradient(rgba(10, 37, 64, 0.8), rgba(10, 37, 64, 0.9)),
+            background: linear-gradient(rgba(10, 37, 64, 0.8), rgba(10, 37, 64, 0.9)), 
                         url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
             background-size: cover;
             background-position: center;
             text-align: center;
         }
+
         #hero .container {
             max-width: 900px;
         }
+
         .hero-subtitle {
             font-size: 1.5rem;
             color: var(--accent-blue);
             margin-bottom: 2rem;
             font-weight: 600;
         }
+
         /* --- PROPÓSITO --- */
         .grid-2 {
             display: grid;
@@ -168,15 +192,18 @@
             gap: 50px;
             align-items: center;
         }
+
         .proposito-list {
             list-style: none;
         }
+
         .proposito-list li {
             margin-bottom: 25px;
             display: flex;
             align-items: start;
             gap: 15px;
         }
+
         .circle-num {
             min-width: 40px;
             height: 40px;
@@ -188,9 +215,11 @@
             color: var(--bg-dark);
             margin-top: 5px;
         }
+
         .bg-y { background-color: var(--accent-yellow); }
         .bg-p { background-color: var(--accent-pink); }
         .bg-b { background-color: var(--accent-blue); }
+
         .img-rounded {
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
@@ -198,6 +227,7 @@
             height: auto;
             object-fit: cover;
         }
+
         /* --- ESTRUCTURA (Pirámide) --- */
         .pyramid-container {
             display: flex;
@@ -206,6 +236,7 @@
             gap: 5px;
             margin-top: 40px;
         }
+
         .pyramid-level {
             text-align: center;
             padding: 20px;
@@ -214,19 +245,22 @@
             clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%);
             transition: transform 0.3s;
         }
-       
+        
         .pyramid-level:hover {
             transform: scale(1.02);
         }
+
         .level-1 { width: 40%; background: var(--accent-pink); font-size: 1.2rem; }
         .level-2 { width: 60%; background: linear-gradient(90deg, var(--accent-pink), var(--accent-yellow)); font-size: 1.3rem; }
         .level-3 { width: 80%; background: var(--accent-yellow); font-size: 1.4rem; }
+
         /* --- VALORES & ACCIONES --- */
         .grid-3 {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 30px;
         }
+
         .card {
             background: rgba(255,255,255,0.05);
             padding: 30px;
@@ -235,39 +269,46 @@
             text-align: center;
             transition: transform 0.3s;
         }
+
         .card:hover {
             transform: translateY(-10px);
             background: rgba(255,255,255,0.08);
         }
+
         .card-icon {
             font-size: 3rem;
             margin-bottom: 20px;
         }
-       
+        
         .icon-yellow { color: var(--accent-yellow); }
         .icon-pink { color: var(--accent-pink); }
         .icon-blue { color: var(--accent-blue); }
+
         .valores-bg {
             background: linear-gradient(rgba(10, 37, 64, 0.9), rgba(10, 37, 64, 0.9)),
                         url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
             background-size: cover;
             background-attachment: fixed;
         }
+
         /* --- ÚNETE --- */
         .unete-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 40px;
         }
+
         .benefit-box {
             background: var(--bg-darker);
             padding: 40px;
             border-radius: 20px;
             border-left: 5px solid var(--accent-yellow);
         }
+
         .benefit-box:nth-child(2) {
             border-left-color: var(--accent-pink);
         }
+
         .img-grid-full {
             grid-column: 1 / -1;
             margin-top: 40px;
@@ -276,11 +317,13 @@
             width: 100%;
             border-radius: 20px;
         }
+
         /* --- COLABORA --- */
         .colabora-list {
             max-width: 800px;
             margin: 0 auto 40px auto;
         }
+
         .colabora-item {
             display: flex;
             align-items: center;
@@ -289,22 +332,26 @@
             padding: 20px;
             border-radius: 10px;
         }
+
         .arrow-icon {
             color: var(--accent-pink);
             font-size: 2rem;
             margin-right: 20px;
         }
+
         /* --- FOOTER --- */
         footer {
             background-color: var(--bg-darker);
             padding: 60px 0 30px 0;
             border-top: 1px solid rgba(255,255,255,0.1);
         }
+
         .footer-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 60px;
         }
+
         .footer-form input, .footer-form textarea {
             width: 100%;
             padding: 15px;
@@ -313,17 +360,21 @@
             border: none;
             font-family: var(--font-body);
         }
+
         .social-icons {
             margin-top: 20px;
             display: flex;
             gap: 15px;
         }
+
         .social-icons a {
             color: white;
             font-size: 1.5rem;
             transition: color 0.3s;
         }
+
         .social-icons a:hover { color: var(--accent-yellow); }
+
         .copyright {
             text-align: center;
             margin-top: 50px;
@@ -332,6 +383,7 @@
             padding-top: 20px;
             border-top: 1px solid rgba(255,255,255,0.05);
         }
+
         /* --- RESPONSIVE --- */
         @media (max-width: 768px) {
             .nav-links {
@@ -345,22 +397,26 @@
                 padding: 20px;
                 text-align: center;
             }
+
             .nav-links.active { display: flex; }
             .menu-toggle { display: block; }
-           
+            
             .grid-2, .grid-3, .unete-container, .footer-content {
                 grid-template-columns: 1fr;
             }
+
             h1 { font-size: 36px; }
-           
+            
             .pyramid-level { width: 90% !important; clip-path: none; border-radius: 10px; margin-bottom: 10px; }
         }
+
         /* --- ANIMACIONES --- */
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
+
         .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
@@ -368,6 +424,7 @@
     </style>
 </head>
 <body>
+
     <header class="nav-header">
         <div class="container nav-container">
             <a href="#hero" class="logo">
@@ -391,6 +448,7 @@
             </ul>
         </div>
     </header>
+
     <header id="hero">
         <div class="container fade-in">
             <div style="display:inline-block; margin-bottom: 20px;">
@@ -404,6 +462,7 @@
             <a href="#colabora" class="btn">Únete a nosotros</a>
         </div>
     </header>
+
     <section id="proposito">
         <div class="container grid-2">
             <div class="fade-in">
@@ -432,6 +491,7 @@
             </div>
         </div>
     </section>
+
     <section id="estructura" style="background-color: #0d2e4f;">
         <div class="container fade-in" style="text-align: center;">
             <h2>Una Asociación Organizada para la Acción</h2>
@@ -443,6 +503,7 @@
             <p style="margin-top: 30px; opacity: 0.8;">"Nuestra estructura se basa en la participación y el compromiso de nuestros miembros."</p>
         </div>
     </section>
+
     <section id="valores" class="valores-bg">
         <div class="container">
             <h2 style="text-align: center;">Nuestros Valores</h2>
@@ -465,6 +526,7 @@
             </div>
         </div>
     </section>
+
     <section id="acciones">
         <div class="container">
             <h2 style="text-align: center;">¿Qué Hacemos?</h2>
@@ -484,6 +546,7 @@
             </div>
         </div>
     </section>
+
     <section id="unete" style="background-color: #0d2e4f;">
         <div class="container">
             <h2 style="text-align: center;">Únete a Nosotros: Marca la Diferencia</h2>
@@ -504,6 +567,7 @@
             </div>
         </div>
     </section>
+
     <section id="colabora">
         <div class="container fade-in" style="text-align: center;">
             <h2>Tu Empatía Marca la Diferencia</h2>
@@ -524,6 +588,7 @@
             <a href="#contacto" class="btn">Contáctanos ahora</a>
         </div>
     </section>
+
     <footer id="contacto">
         <div class="container">
             <h2 style="text-align: center; margin-bottom: 40px;">Gracias por tu Empatía y Compromiso</h2>
@@ -533,14 +598,14 @@
                     <p><strong>¿Preguntas?</strong></p>
                     <p><i class="fas fa-envelope"></i> info@emia.org</p>
                     <p><i class="fab fa-whatsapp"></i> 123 456 789</p>
-                   
+                    
                     <div class="social-icons">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-facebook"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
-               
+                
                 <form class="footer-form" onsubmit="event.preventDefault(); alert('Gracias por contactar con EMIA. Te responderemos pronto.');">
                     <input type="text" placeholder="Tu Nombre" required>
                     <input type="email" placeholder="Tu Email" required>
@@ -556,12 +621,14 @@
             </div>
         </div>
     </footer>
+
     <script>
         // Menú responsive
         function toggleMenu() {
             const nav = document.querySelector('.nav-links');
             nav.classList.toggle('active');
         }
+
         // Animación al hacer scroll (Intersection Observer)
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -570,9 +637,10 @@
                 }
             });
         }, { threshold: 0.1 });
+
         document.querySelectorAll('.fade-in').forEach((el) => {
             observer.observe(el);
         });
     </script>
 </body>
-</html>
+    </html>
