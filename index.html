@@ -20,59 +20,67 @@
             --font-body: 'Inter', sans-serif;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: smooth; }
-        body { background-color: var(--bg-dark); color: var(--text-white); font-family: var(--font-body); line-height: 1.6; font-size: 18px; }
-        h1, h2, h3 { font-family: var(--font-title); font-weight: 700; margin-bottom: 1rem; }
-        h1 { font-size: clamp(40px, 5vw, 60px); }
-        h2 { font-size: clamp(32px, 4vw, 48px); color: var(--accent-yellow); }
+        body { background: var(--bg-dark); color: var(--text-white); font-family: var(--font-body); line-height: 1.6; font-size: 18px; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .btn { display: inline-block; background: var(--accent-yellow); color: var(--bg-dark); padding: 15px 35px; font-weight: bold; border-radius: 50px; text-decoration: none; transition: all 0.3s; }
-        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(251,191,36,0.3); }
-        section { padding: 80px 0; }
-        header.nav-header { position: sticky; top: 0; background: rgba(10,37,64,0.95); backdrop-filter: blur(10px); z-index: 1000; padding: 15px 0; }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; }
-        .logo { display: flex; align-items: center; gap: 10px; color: white; text-decoration: none; font-size: 1.5rem; font-family: var(--font-title); }
-        .nav-links { display: flex; gap: 25px; list-style: none; }
-        .nav-links a { color: white; text-decoration: none; font-weight: 600; }
-        .nav-links a:hover { color: var(--accent-yellow); }
-        #hero { height: 100vh; display: flex; align-items: center; background: linear-gradient(rgba(10,37,64,0.8), rgba(10,37,64,0.9)), url('https://files.123freevectors.com/wp-content/original/116378-abstract-dark-blue-blurred-bokeh-background-image.jpg'); background-size: cover; text-align: center; }
-        /* Añade el resto de tu CSS original aquí (grid, pyramid, cards, etc.) para mantener el estilo exacto */
+        section { padding: 100px 0; }
+        h1, h2 { font-family: var(--font-title); text-align: center; }
+        h1 { font-size: 3rem; margin-bottom: 1rem; }
+        h2 { font-size: 2.5rem; color: var(--accent-yellow); margin-bottom: 3rem; }
+        .btn { background: var(--accent-yellow); color: var(--bg-dark); padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 2rem; }
+        #hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(rgba(10,37,64,0.8), rgba(10,37,64,0.9)), url('https://files.123freevectors.com/wp-content/original/116378-abstract-dark-blue-blurred-bokeh-background-image.jpg'); background-size: cover; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .card { background: rgba(255,255,255,0.05); padding: 30px; border-radius: 20px; text-align: center; }
+        .circle-num { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; color: var(--bg-dark); margin: 0 auto 20px; }
+        .bg-y { background: var(--accent-yellow); }
+        .bg-p { background: var(--accent-pink); }
+        .bg-b { background: var(--accent-blue); }
+        footer { background: var(--bg-darker); padding: 60px 0; text-align: center; }
     </style>
 </head>
 <body>
-    <header class="nav-header">
-        <div class="container nav-container">
-            <a href="#hero" class="logo">
-                <img src="logo.png" alt="Logo EMIA" style="width: 45px; height: auto;">
-                EMIA
-            </a>
-            <ul class="nav-links">
-                <li><a href="#hero">Inicio</a></li>
-                <li><a href="#proposito">Propósito</a></li>
-                <!-- ... el resto de enlaces ... -->
-            </ul>
-        </div>
-    </header>
-
     <section id="hero">
         <div class="container">
-            <img src="logo.png" alt="Logo EMIA" style="width: 200px; height: auto; margin-bottom: 30px;">
+            <img src="logo.png" alt="Logo EMIA" style="width: 250px; margin-bottom: 30px;">
             <h1>EMIA: Por la Empatía y la Integración Audiológica de las Personas Sordas</h1>
             <p style="font-size: 1.5rem;">Por Dª. Luz María Domínguez Calvo</p>
             <a href="#colabora" class="btn">Únete a nosotros</a>
         </div>
     </section>
 
-    <!-- El resto de secciones (propósito, estructura, valores, etc.) igual que antes -->
+    <section id="proposito">
+        <div class="container">
+            <h2>Nuestro Propósito: Impulsando la Integración y la Empatía</h2>
+            <div>
+                <div class="circle-num bg-y">1</div>
+                <p><strong>Mejorar el acceso a tecnologías</strong><br>Facilitar ayudas auditivas de última generación para personas sordas.</p>
+                <div class="circle-num bg-p">2</div>
+                <p><strong>Promover la educación inclusiva</strong><br>Desde la infancia hasta la formación profesional.</p>
+                <div class="circle-num bg-b">3</div>
+                <p><strong>Desarrollar programas de sensibilización</strong><br>Dirigidos a empresas, escuelas y la sociedad en general.</p>
+                <div class="circle-num bg-y">4</div>
+                <p><strong>Ofrecer apoyo psicológico y social</strong><br>Crear espacios de encuentro y comunidad para personas sordas y sus familias.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Puedes añadir más secciones (estructura pirámide, valores, etc.) si quieres el diseño completo. Este es un inicio sólido y fiel. -->
+
+    <section id="colabora">
+        <div class="container">
+            <h2>Tu Empatía Marca la Diferencia: ¡Colabora con EMIA!</h2>
+            <!-- Aquí las opciones de miembro, voluntariado, donaciones -->
+        </div>
+    </section>
 
     <footer id="contacto">
-        <!-- Tus datos reales -->
-        <p><i class="fas fa-envelope"></i> <a href="mailto:emiaaudiologia@gmail.com">emiaaudiologia@gmail.com</a></p>
-        <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/34674859761">674 859 761</a></p>
-        <p><strong>Representante:</strong> Dª. Luz María Domínguez Calvo</p>
-        <p><strong>Domicilio:</strong> O Calvo - Rebón Nº 1, C.P. 36669, Moraña (Pontevedra)</p>
-        <img src="logo.png" alt="Logo EMIA" style="width: 50px; margin-top: 20px;">
-        <p>EMIA - Asociación sin ánimo de lucro © 2025</p>
+        <div class="container">
+            <img src="logo.png" alt="Logo EMIA" style="width: 100px; margin-bottom: 20px;">
+            <p><strong>Email:</strong> emiaaudiologia@gmail.com</p>
+            <p><strong>Teléfono/WhatsApp:</strong> 674 859 761</p>
+            <p><strong>Representante:</strong> Dª. Luz María Domínguez Calvo</p>
+            <p><strong>Domicilio:</strong> O Calvo - Rebón Nº 1, C.P. 36669, Moraña (Pontevedra)</p>
+            <p>EMIA - Asociación sin ánimo de lucro © 2025</p>
+        </div>
     </footer>
 </body>
 </html>
